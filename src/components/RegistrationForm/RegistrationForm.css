@@ -1,0 +1,28 @@
+.account-link {
+    text-decoration: none;
+    margin-top: 1vh;
+    color: #784F41;
+    margin: 2vh 0 3vh 0;
+}
+
+.error-message {
+    color: red;
+    font-size: 2.2vh;
+    width: 85vw;;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    margin-top: 2vh;
+    font-size: 2.2vh;
+    align-items: center;    
+}
+
+@media only screen and (min-width: 800px) {
+    .error-message {
+        width: 70vw;
+        text-align: center;
+    }
+}

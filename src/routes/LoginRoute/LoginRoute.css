@@ -1,0 +1,9 @@
+h1 {
+    color: #84A9C0; 
+}
+
+.login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

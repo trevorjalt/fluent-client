@@ -1,0 +1,124 @@
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+header {
+    animation: .75s ease-in 0s 1 slideInFromLeft;
+}
+
+.Header {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;;
+    background-color: #FCF1ED;
+    padding: 1vw 2vw 1vw 2vw;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 8vh;
+    text-decoration: none;
+    color: #995533;
+}
+
+.logo-icon {
+    height: 5.5vh;
+    margin: 0 2vw 0 2vw;
+}
+
+.navigation-icon {
+    width: 43px;
+    height: 33px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    margin-right: 1vw;
+}
+
+.navigation-item {
+    animation: .25s ease-in 0s 1 slideInFromRight;
+    display: flex;
+    flex-direction: column;
+    background: #F3DFD3;
+    margin: 1vh 0 1vh 0;
+    padding: .5vh 0 .5vh 0;
+}
+
+.navigation-link, .username {
+    margin: .5vh 4vw 0 0;
+    text-decoration: none;
+    font-size: 2.5vh;
+    text-align: right;
+    color: #020505;
+}
+
+.navigation-stripe {
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: #020505;
+    border-radius: 5px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+} 
+
+.navigation-stripe-top {
+    top: 0px;
+    transform-origin: left center;
+}
+
+.navigation-stripe-top-open {
+    transform: rotate(45deg);
+    top: -3px;
+    left: 5px;
+}
+
+.nagivation-stripe-middle {
+    top: 12px;
+    transform-origin: left center;
+}
+
+.navigation-stripe-bottom {
+    top: 24px;
+    transform-origin: left center;
+}
+
+.navigation-stripe-bottom-open {
+    transform: rotate(-45deg);
+    top: 27px;
+    left: 5px;
+}
+
+.user-icon {
+    margin: 0 0 0 2vw;
+    height: 2.5vh;
+    
+}
+
+.username-item {
+    animation: .25s ease-in 0s 1 slideInFromRight;
+    display: flex;
+    flex-direction: column;
+    background: #BFCDCD;
+    margin: 1vh 0 1vh 0;
+    padding: .5vh 0 .5vh 0;
+}

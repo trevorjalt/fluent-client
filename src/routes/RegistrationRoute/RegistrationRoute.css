@@ -1,0 +1,55 @@
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+.fluent-info {
+    width: 85vw;
+    font-size: 2.2vh;
+}
+
+h1 {
+    animation: .75s ease-in 0s 1 slideInFromRight;
+}
+
+h2 {
+    animation: .75s ease-in 0s 1 slideInFromLeft;
+}
+
+h1, h2 {
+    font-size: 4vh;
+}
+
+h2 {
+    color: #84A9C0;
+}
+
+.logo-text {
+    color: #020505;
+}
+
+.registration-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (min-width: 800px) {
+    .fluent-info {
+        width: 70vw;
+        text-align: center;
+    }
+}
