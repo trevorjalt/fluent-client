@@ -21,10 +21,6 @@
     font-size: 2.2vh;
 }
 
-h2 {
-    animation: .75s ease-in 0s 1 slideInFromLeft;
-}
-
 h2, .welcome {
     font-size: 4vh;
 }
@@ -41,6 +37,10 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.sign-up {
+    animation: .75s ease-in 0s 1 slideInFromLeft;
 }
 
 .welcome {

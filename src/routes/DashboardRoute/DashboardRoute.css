@@ -1,0 +1,56 @@
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+.dashboard-route {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-welcome {
+    font-size: 4vh;
+    margin: 5vh 0 5vh 0;
+    font-weight: bold;
+    animation: .75s ease-in 0s 1 slideInFromRight;
+}
+
+h3 {
+    color:#84A9C0;
+    font-size: 4vh;
+    animation: .75s ease-in 0s 1 slideInFromLeft;
+    
+}
+
+.practice-button {
+    width: 40vw;
+    padding: 1vh 0 1vh 0;
+    border: 2px solid;
+    border-radius: 50px;
+    background-color: #BFCDCD;
+    font-size: 2.2vh;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin: 3vh 0 3vh 0;
+    text-align: center;
+}
+
+.practice-link {
+    text-decoration: none;
+    color: #020505;
+}
+
+.welcome-blue {
+    color:#84A9C0
+}
+
+@media only screen and (min-width: 800px) {
+    .practice-button {
+        width: 25vw;
+    }
+}

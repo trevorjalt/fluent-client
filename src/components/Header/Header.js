@@ -10,7 +10,7 @@ class Header extends Component {
     static contextType = UserContext
 
     state = {
-        navMenu: false,
+        navMenu: true,
     }
 
     handleNavClick = () => {
@@ -95,6 +95,9 @@ class Header extends Component {
                         <img src={Logo} alt='fluent logo' className='logo-icon' />
                         <Link to='/' className='logo'>
                             fluent
+                            <div>
+                            <span className='logo-small'>Spaced repetition</span>
+                            </div> 
                         </Link>
                     </h1>
                     {this.renderNavIcon()}
