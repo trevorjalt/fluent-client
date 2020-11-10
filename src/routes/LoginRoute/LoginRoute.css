@@ -1,9 +1,19 @@
-h1 {
-    color: #84A9C0; 
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
 }
 
 .login-page {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.login-title {
+    animation: .75s ease-in 0s 1 slideInFromRight;
+    margin-top: 5vh;
 }

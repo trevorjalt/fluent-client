@@ -91,12 +91,12 @@ class Header extends Component {
         return (
             <header>
                 <div className='Header'>
-                    <span>
+                    <h1>
                         <img src={Logo} alt='fluent logo' className='logo-icon' />
                         <Link to='/' className='logo'>
                             fluent
                         </Link>
-                    </span>
+                    </h1>
                     {this.renderNavIcon()}
                 </div>
                 <div>

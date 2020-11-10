@@ -17,7 +17,7 @@ class RegistrationRoute extends Component {
   render() {
     return (
       <section className='registration-page'>
-        <h1><span className='logo-text'>Welcome to</span> fluent</h1>
+        <span className='welcome'><span className='logo-text'>Welcome to</span> fluent</span>
         <div className='fluent-info'>
           <p>
             Practice learning a language with the spaced reptition revision technique.

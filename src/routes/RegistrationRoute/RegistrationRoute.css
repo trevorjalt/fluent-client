@@ -21,15 +21,11 @@
     font-size: 2.2vh;
 }
 
-h1 {
-    animation: .75s ease-in 0s 1 slideInFromRight;
-}
-
 h2 {
     animation: .75s ease-in 0s 1 slideInFromLeft;
 }
 
-h1, h2 {
+h2, .welcome {
     font-size: 4vh;
 }
 
@@ -45,6 +41,13 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.welcome {
+    animation: .75s ease-in 0s 1 slideInFromRight;
+    color: #84A9C0; 
+    font-weight: bold;
+    margin: 5vh 0 2vh 0;
 }
 
 @media only screen and (min-width: 800px) {
