@@ -74,9 +74,9 @@ class LoginForm extends Component {
                     />
                 </div>
                 <footer>
-                  <Button type='submit'>
-                      Login
-                  </Button>
+                    <Button type='submit'>
+                        Login
+                    </Button>
                 </footer>
             </form>
         )

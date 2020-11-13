@@ -21,7 +21,6 @@ class LanguageDashboard extends Component {
     }
 
     renderLanguageDashboard() {
-        const { error } = this.state
         const { language } = this.context
 
         return (
@@ -35,8 +34,13 @@ class LanguageDashboard extends Component {
     }
 
     render() {
+        const { error } = this.state
+
         return (
             <div>
+                <div role='alert' className='error-message'>
+                    {error && <p>{error}</p>}
+                </div>
                 {this.renderLanguageDashboard()}
             </div>
         )

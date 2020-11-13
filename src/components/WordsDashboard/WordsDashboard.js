@@ -22,7 +22,7 @@ class LanguageDashboard extends Component {
 
     renderWordsDashboard() {
         const { words = [] } = this.context
-        console.log(words)
+
         return words.map(word => 
             <li 
                 key={word.id} 
@@ -40,7 +40,10 @@ class LanguageDashboard extends Component {
     render() {
         const { error } = this.state
         return (
-            <div>
+            <div className='words-list'>
+                <div role='alert' className='error-message'>
+                    {error && <p>{error}</p>}
+                </div>
                 <ul>
                     {this.renderWordsDashboard()}
                 </ul>

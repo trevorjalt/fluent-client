@@ -1,0 +1,22 @@
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+.DisplayScore {
+    animation: .75s ease-in 0s 1 slideInFromRight;
+    display: flex;
+    flex-direction: column;
+    background: #BFCDCD;
+    margin: 1vh 0 1vh 0;
+    text-align: right;
+}
+
+.score-text {
+    margin-right: 4vw;
+    font-size: 2vh;
+}

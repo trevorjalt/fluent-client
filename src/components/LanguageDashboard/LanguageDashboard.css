@@ -12,7 +12,7 @@
 }
 
 .language-dashboard-top {
-    background: #84A9C0;
+    background: #FCF1ED;
     border-radius: 50px 50px 0 0;
     padding: .5vh 0 .5vh 0;
 }
@@ -20,6 +20,11 @@
 .language-dashboard-total {
     font-size: 2.5vh;
     padding: 0 0 2vh 0;
+}
+
+.language-ruler {
+    background: #FCF1ED;
+    color:  #FCF1ED;
 }
 
 @media only screen and (min-width: 800px) {
