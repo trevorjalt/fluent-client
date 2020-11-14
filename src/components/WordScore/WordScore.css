@@ -1,0 +1,48 @@
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.blue {
+    color: #84A9C0;
+}
+
+.next-up {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: right;
+    text-align: right;
+    margin-right: 4vw;
+    animation: .75s ease-in 0s 1 slideInFromRight;
+    font-size: 2.5vh;
+}
+
+.word-score {
+    animation: .75s ease-in 0s 1 slideInFromRight;
+    display: flex;
+    flex-direction: column;
+    background: #F3DFD3;
+    margin: 1vh 0 1vh 0;
+    text-align: right;
+    padding: .5vh 0 .5vh 0;
+}
+
+.word-score-text {
+    margin-right: 4vw;
+    font-size: 2vh;
+}
+
+@media only screen and (min-width: 800px) {
+    .word-score-text {
+        font-size: 2.5vh;
+    }
+}

@@ -19,10 +19,6 @@
     color: green;
 }
 
-.red {
-    color: red;
-}
-
 .DisplayFeedback {
     width: 85vw;
     display: flex;
@@ -32,13 +28,13 @@
     text-align: center;
 }
 
-.incorrect-wrapper {
+.Correct-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.incorrect-response {
+.Correct-response {
     animation: .75s ease-in 0s 1 slideInFromLeft;
     font-size: 3vh;
 }
@@ -47,7 +43,7 @@
     .DisplayFeedback {
         font-size: 2.5vh;
     }
-    .incorrect-response {
+    .Correct-response {
         font-size: 4vh;
     }
 }

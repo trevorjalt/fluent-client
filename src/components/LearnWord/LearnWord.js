@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
-import { Input, Label } from '../Form/Form'
-import Button from '../Button/Button'
 import LanguageApiService from '../../services/language-api-service'
 import LanguageContext from '../../contexts/LanguageContext'
+import Button from '../Button/Button'
+import Correct from '../Correct/Correct'
 import Incorrect from '../Incorrect/Incorrect'
+import { Input, Label } from '../Form/Form'
 import TotalScore from '../TotalScore/TotalScore'
+import WordScore from '../WordScore/WordScore'
 import './LearnWord.css'
 
 class LearnWord extends Component {
@@ -80,21 +82,6 @@ class LearnWord extends Component {
         )
     }
 
-    renderWordScore() {
-        const { correct, incorrect } = this.context
-        return (
-            <div>
-                <div className='word-score'>
-                    <span className='word-score-text'>You have answered this word <span className='bold'>correctly</span> {correct} times.</span>
-                </div>
-                <div className='word-score'>
-                    <span className='word-score-text'>You have answered this word <span className='bold'>incorrectly</span> {incorrect} times.</span>
-                </div>
-            </div>
-
-        )
-    }
-
     render() {
         const { submit, isCorrect } = this.context
 
@@ -113,7 +100,11 @@ class LearnWord extends Component {
                     ? <Incorrect />
                     : ''
                 }
-                {this.renderWordScore()}
+                {submit && isCorrect === true
+                    ? <Correct />
+                    : ''
+                }
+                <WordScore />
             </div>
         )
     }

@@ -8,6 +8,10 @@ import './DashboardRoute.css'
 class DashboardRoute extends Component {
     static contextType = UserContext
 
+    state = {
+        error: null
+    }
+
     renderStartPracticing() {
         return (
             <span className='practice-button'>
@@ -17,9 +21,13 @@ class DashboardRoute extends Component {
     }
     
     render() {
-
+        let { error } = this.state
+        
         return (
             <section className='dashboard-route'>
+                <div role='alert' className='error-message'>
+                    {error && <p>{error}</p>}
+                </div>
                 <span className='dashboard-welcome'>Welcome <span className='welcome-blue'>{this.context.user.name}</span>.</span>
                 <LanguageDashboard />
                 {this.renderStartPracticing()}

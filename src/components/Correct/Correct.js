@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import TryAnotherButton from '../TryAnotherButton/TryAnotherButton'
 import LanguageContext from '../../contexts/LanguageContext'
-import './Incorrect.css'
+import './Correct.css'
 
-class Incorrect extends Component {
+class Correct extends Component {
     static contextType = LanguageContext
 
     render() {
@@ -11,10 +11,10 @@ class Incorrect extends Component {
         response = response.response
 
         return (
-            <div className='incorrect-wrapper'>
-                <h2 className='incorrect-response'>Good try, but not quite right :(</h2>
+            <div className='Correct-wrapper'>
+                <h2 className='Correct-response'>You were correct! :D</h2>
                 <div className='DisplayFeedback'>
-                    <p>The correct translation for <span className='blue bold'>{nextWord.nextWord}</span> was <span className='green'>{response.answer}</span> and you chose <span className='red'>{guess}!</span></p>
+                    <p>The correct translation for <span className='blue bold'>{nextWord.nextWord}</span> was <span className='green'>{response.answer}</span> and you chose <span className='green'>{guess}!</span></p>
                 </div>
                 <footer>
                     <TryAnotherButton />
@@ -24,4 +24,4 @@ class Incorrect extends Component {
     }
 }
 
-export default Incorrect
+export default Correct

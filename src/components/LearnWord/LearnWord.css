@@ -7,31 +7,12 @@
     }
 }
 
-@keyframes slideInFromRight {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-}
-
-.bold {
-    font-weight: bold;
-}
-
 .learn-word-form {
     margin: 3.5vh 0 3.5vh 0;
 }
 
 .submit-your-answer {
     width: 50vw;
-}
-
-
-.word-score-text {
-    margin-right: 4vw;
-    font-size: 2vh;
 }
 
 .translate-header {
@@ -42,16 +23,6 @@
 
 .translate-the-word {
     animation: .75s ease-in 0s 1 slideInFromLeft;
-}
-
-.word-score {
-    animation: .75s ease-in 0s 1 slideInFromRight;
-    display: flex;
-    flex-direction: column;
-    background: #F3DFD3;
-    margin: 1vh 0 1vh 0;
-    text-align: right;
-    padding: .5vh 0 .5vh 0;
 }
 
 .word-to-translate {
