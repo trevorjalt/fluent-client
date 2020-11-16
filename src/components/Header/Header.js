@@ -13,6 +13,12 @@ class Header extends Component {
         navMenu: true,
     }
 
+    handleKeyPressed = event => {
+        if (event.key === 'Enter') {
+            this.handleNavClick()
+        }
+    }
+
     handleNavClick = () => {
         this.setState({ navMenu: !this.state.navMenu })
     }
@@ -30,7 +36,7 @@ class Header extends Component {
                         <img src={User} alt='fluent user logo' className='user-icon' />
                     </span>
                 </span>
-                <nav>
+                <nav role='navigation'>
                     <span className='navigation-item'>
                         <Link
                             onClick={this.handleLogoutClick}
@@ -46,7 +52,7 @@ class Header extends Component {
 
     renderLoginLink() {
         return (
-            <nav>
+            <nav role='navigation'>
                 <span className='navigation-item'>
                     <Link to='/login' className='navigation-link'>Login</Link>
                 </span>
@@ -60,7 +66,15 @@ class Header extends Component {
     renderNavIcon() {
         if (this.state.navMenu === false) {
             return (
-                <div className='navigation-icon' onClick={this.handleNavClick}>
+                <div 
+                    className='navigation-icon' 
+                    onClick={this.handleNavClick}
+                    onKeyDown={this.handleKeyPressed} 
+                    tabIndex='0'
+                    role='button'
+                    aria-label='navigation-menu-clickable'
+                    aria-expanded='false'
+                >
                     <span className='navigation-stripe-top navigation-stripe' />
                     <span className='nagivation-stripe-middle navigation-stripe' />
                     <span className='navigation-stripe-bottom navigation-stripe' />
@@ -68,7 +82,15 @@ class Header extends Component {
             )
         }
         return (
-            <div className='navigation-icon' onClick={this.handleNavClick}>
+            <div 
+                className='navigation-icon' 
+                onClick={this.handleNavClick}
+                onKeyDown={this.handleKeyPressed} 
+                tabIndex='0'
+                role='button'
+                aria-label='navigation-menu-clickable'
+                aria-expanded='true'
+            >
                 <span className='navigation-stripe-top navigation-stripe-top-open navigation-stripe' />
                 <span className='navigation-stripe-bottom navigation-stripe-bottom-open navigation-stripe' />
             </div>
@@ -78,7 +100,10 @@ class Header extends Component {
     renderNavMenu() {
         if (this.state.navMenu === true) {
             return (
-                <div>
+                <div
+                    aria-live='assertive'
+                    aria-relevant='all'
+                >
                     {TokenService.hasAuthToken()
                         ? this.renderLogoutLink()
                         : this.renderLoginLink()}
@@ -89,7 +114,7 @@ class Header extends Component {
 
     render() {
         return (
-            <header>
+            <header role='banner'>
                 <div className='Header'>
                     <h1>
                         <img src={Logo} alt='fluent logo' className='logo-icon' />

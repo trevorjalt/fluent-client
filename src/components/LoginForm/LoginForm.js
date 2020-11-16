@@ -48,7 +48,11 @@ class LoginForm extends Component {
                 className='LoginForm'
                 onSubmit={this.handleSubmit}
             >
-                <div role='alert' className='error-message'>
+                <div 
+                    role='alert' 
+                    className='error-message'
+                    aria-live='assertive'
+                >
                     {error && <p>{error}</p>}
                 </div>
                 <div>
@@ -60,6 +64,8 @@ class LoginForm extends Component {
                         id='login-username-input'
                         name='username'
                         required
+                        aria-required='true'
+                        autocomplete='username'
                     />
                 </div>
                 <div>
@@ -71,13 +77,15 @@ class LoginForm extends Component {
                         name='password'
                         type='password'
                         required
+                        aria-required='true'
+                        autocomplete='current-password'
                     />
                 </div>
-                <footer>
+                <div className='submit-login'>
                     <Button type='submit'>
                         Login
                     </Button>
-                </footer>
+                </div>
             </form>
         )
     }

@@ -1,8 +1,15 @@
+.bold-and-brown {
+    font-weight: bold;
+    color: #995533;
+}
+
 .language-dashboard {
-    background: #f3dfd3;
+    background: #FCF1ED;
     width:  85vw;
     border-radius: 50px;
     text-align: center;
+    padding: 1vh 0 1vh 0;
+    margin: 0 0 4vh 0;
 }
 
 .language-dashboard-title {
@@ -11,15 +18,8 @@
     font-weight: normal;
 }
 
-.language-dashboard-top {
-    background: #FCF1ED;
-    border-radius: 50px 50px 0 0;
-    padding: .5vh 0 .5vh 0;
-}
-
 .language-dashboard-total {
     font-size: 2.5vh;
-    padding: 0 0 2vh 0;
 }
 
 .language-ruler {

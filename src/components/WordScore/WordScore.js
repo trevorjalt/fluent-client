@@ -12,7 +12,7 @@ class WordScore extends Component {
             <div>
                 {submit
                     ? (<div className='next-up'>
-                        <span>Next Up: <span className='blue'>{nextUp}</span></span>
+                        <span>Next Up: <span lang='de'><span className='blue'>{nextUp}</span></span></span>
                       </div>)
                     : ''
                 }

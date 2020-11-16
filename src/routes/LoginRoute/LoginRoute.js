@@ -18,7 +18,11 @@ class LoginRoute extends Component {
 
     render() {
         return (
-            <section className='login-page'>
+            <section 
+                className='login-page'
+                aria-live='polite'
+                aria-relevant='all'
+            >
                 <h2 className='login-title'>Login</h2>
                 <LoginForm
                     onLoginSuccess={this.handleLoginSuccess}

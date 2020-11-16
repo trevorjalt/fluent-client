@@ -23,12 +23,10 @@ export default class App extends Component {
         const { hasError } = this.state
         return (
             <div className='App'>
-                <header>
-                    <Header />
-                </header>
-                <main>
+                <Header />
+                <main role='main'>
                     {hasError && (
-                        <p>There was an error! Oh no!</p>
+                        <p aria-live='assertive'>There was an error! Oh no!</p>
                     )}
                     <Switch>
                         <PrivateRoute
@@ -53,10 +51,8 @@ export default class App extends Component {
                         />
                     </Switch>
                 </main>
-                <footer>
-                    <Footer />
-                </footer>
+                <Footer />
             </div>
-        );
+        )
     }
 }

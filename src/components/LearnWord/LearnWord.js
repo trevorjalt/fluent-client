@@ -57,16 +57,18 @@ class LearnWord extends Component {
                         id='learn-guess-input'
                         name='guess'
                         required
+                        aria-required='true'
+                        autocomplete='off'
                     />
                 </div>
-                <footer>
+                <div className='submit-word-guess'>
                     <Button 
                         type='submit'
                         className='submit-your-answer'
                     >
                         Submit your answer
                     </Button>
-                </footer>
+                </div>
             </form>
         )
     }
@@ -77,7 +79,7 @@ class LearnWord extends Component {
         return (
             <div className='translate-header'>  
                 <h2 className='translate-the-word'>Translate the word:</h2>
-                <span className='word-to-translate'>{nextWord.nextWord}</span>
+                <span lang='de'><span className='word-to-translate'>{nextWord.nextWord}</span></span>
             </div>
         )
     }

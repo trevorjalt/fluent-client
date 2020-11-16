@@ -8,7 +8,7 @@
 }
 
 .blue {
-    color: #84A9C0;
+    color: #4C7994;
 }
 
 .bold {
@@ -37,6 +37,15 @@
 .Correct-response {
     animation: .75s ease-in 0s 1 slideInFromLeft;
     font-size: 3vh;
+}
+
+.next-word-button {
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    margin-top: 2vh;
+    font-size: 2.2vh;
+    align-items: center;
 }
 
 @media only screen and (min-width: 800px) {

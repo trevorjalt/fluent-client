@@ -4,9 +4,12 @@ import './Footer.css'
 export default class Footer extends Component {
     render() {
         return (
-            <div className='Footer'>
+            <footer
+                className='Footer'
+                role='contentinfo'
+            >
                 <h3 className= "footer-copy">© Copyright Trevor J Alt. All Rights Reserved.</h3>
-            </div>
+            </footer>
         )
     }
 }

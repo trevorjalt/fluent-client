@@ -44,7 +44,11 @@ class RegistrationForm extends Component {
                 className='registration-form'
                 onSubmit={this.handleSubmit}
             >
-                <div role='alert' className='error-message'>
+                <div 
+                    role='alert' 
+                    className='error-message'
+                    aria-live='assertive'
+                >
                     {error && <p>{error}</p>}
                 </div>
                 <div className='registration-input'>
@@ -56,6 +60,8 @@ class RegistrationForm extends Component {
                         id='registration-name-input'
                         name='name'
                         required
+                        aria-required='true'
+                        autocomplete='name'
                     />
                 </div>
                 <div className='registration-input'>
@@ -66,6 +72,8 @@ class RegistrationForm extends Component {
                         id='registration-username-input'
                         name='username'
                         required
+                        aria-required='true'
+                        autocomplete='off'
                     />
                 </div>
                 <div className='registration-input'>
@@ -77,9 +85,11 @@ class RegistrationForm extends Component {
                         name='password'
                         type='password'
                         required
+                        aria-required='true'
+                        autocomplete='new-password'
                   />
                 </div>
-                <footer className='registration-input'>
+                <div className='registration-input'>
                     <Button type='submit'>
                         Sign up
                     </Button>
@@ -89,7 +99,7 @@ class RegistrationForm extends Component {
                     >
                         Already have an account?
                     </Link>
-                </footer>
+                </div>
             </form>
         )
     }

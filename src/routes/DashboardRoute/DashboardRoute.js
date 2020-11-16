@@ -24,8 +24,16 @@ class DashboardRoute extends Component {
         let { error } = this.state
         
         return (
-            <section className='dashboard-route'>
-                <div role='alert' className='error-message'>
+            <section 
+                className='dashboard-route'
+                aria-live='polite'
+                aria-relevant='all'
+            >
+                <div 
+                    role='alert' 
+                    className='error-message'
+                    aria-live='assertive'
+                >
                     {error && <p>{error}</p>}
                 </div>
                 <span className='dashboard-welcome'>Welcome <span className='welcome-blue'>{this.context.user.name}</span>.</span>

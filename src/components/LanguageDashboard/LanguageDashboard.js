@@ -25,9 +25,7 @@ class LanguageDashboard extends Component {
 
         return (
             <div className='language-dashboard'>
-                <div className='language-dashboard-top'>
-                <h2 className='language-dashboard-title'>Current Language: {language.name}</h2>
-                </div>
+                <h2 className='language-dashboard-title'>Current Language: <span className='bold-and-brown'>{language.name}</span></h2>
                 <p className='language-dashboard-total'>Total correct answers: {language.total_score}</p>   
             </div>
         )

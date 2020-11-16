@@ -10,8 +10,15 @@ class LearningRoute extends Component {
     render() {
         let { error } = this.state
         return (
-            <section>
-                <div role='alert' className='error-message'>
+            <section
+                aria-live='polite'
+                aria-relevant='all'
+            >
+                <div 
+                    role='alert' 
+                    className='error-message'
+                    aria-live='assertive'
+                >
                     {error && <p>{error}</p>}
                 </div>
                 <LearnWord />

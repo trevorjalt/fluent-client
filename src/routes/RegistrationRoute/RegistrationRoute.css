@@ -26,7 +26,7 @@ h2, .welcome {
 }
 
 h2 {
-    color: #84A9C0;
+    color: #4C7994;
 }
 
 .logo-text {
@@ -45,7 +45,7 @@ h2 {
 
 .welcome {
     animation: .75s ease-in 0s 1 slideInFromRight;
-    color: #84A9C0; 
+    color: #4C7994; 
     font-weight: bold;
     margin: 5vh 0 2vh 0;
 }

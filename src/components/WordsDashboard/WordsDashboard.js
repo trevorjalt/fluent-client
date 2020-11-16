@@ -28,7 +28,7 @@ class LanguageDashboard extends Component {
                 key={word.id} 
                 className='words-dashboard'
             >
-                <h4>{word.original}</h4>
+                <span lang='de'><h4>{word.original}</h4></span>
                 <p>correct answer count: {word.correct_count}</p>
                 <p>incorrect answer count: {word.incorrect_count}</p>
                 <hr />
