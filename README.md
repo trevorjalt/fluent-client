@@ -2,7 +2,7 @@
 
 Welcome to fluent, an app where you can practice learning a language with the spaced reptition revision technique.
 
-`fluent Client` is the frontend for `fluent`.  To see `fluent` in action, check out [fluent](https://benchmark-live.vercel.app/ "fluent").
+`fluent Client` is the frontend for `fluent`.  To see `fluent` in action, check out [fluent](https://fluent-live.vercel.app/ "fluent").
 
 The `fluent` backend can be found at: [fluent-api](https://github.com/trevorjalt/fluent-api/ "fluent Api")
 

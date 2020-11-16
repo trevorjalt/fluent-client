@@ -8,7 +8,7 @@ class TryAnotherButton extends Component {
 
     handleClickNext = ev => {
         ev.preventDefault()
-        let { response, setNextWord, setSubmit } = this.context
+        let { response, setNextWord, setResponseReceived, setSubmit } = this.context
         response = response.response
 
         setNextWord({
@@ -17,6 +17,8 @@ class TryAnotherButton extends Component {
             wordIncorrectCount: response.wordIncorrectCount,
             totalScore: response.totalScore
         })
+
+        setResponseReceived()
 
         setSubmit()
     }

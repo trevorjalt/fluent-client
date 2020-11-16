@@ -11,11 +11,13 @@ const LanguageContext = React.createContext({
     totalScore: 0,
     words: [],
     isCorrect: null,
+    responseReceived: null,
     submit: null,
     setGuess: () => {},
     setLanguage: () => {},
     setNextWord: () => {},
     setResponse: () => {},
+    setResponseReceived: () => {},
     setSubmit: () => {},
     setWords: () => {},
 })
@@ -34,6 +36,7 @@ export class LanguageProvider extends Component {
         totalScore: 0,
         words: [],
         isCorrect: null,
+        responseReceived: null,
         submit: null,
     }
 
@@ -65,6 +68,10 @@ export class LanguageProvider extends Component {
         })
     }
 
+    setResponseReceived = () => {
+        this.setState({ responseReceived: !this.state.responseReceived})
+    }
+
     setSubmit = () => {
         this.setState({ submit: !this.state.submit })
     }
@@ -83,6 +90,7 @@ export class LanguageProvider extends Component {
             nextUp: this.state.nextUp,
             nextWord: this.state.nextWord,
             response: this.state.response,
+            responseReceived: this.state.responseReceived,
             submit: this.state.submit,
             totalScore: this.state.totalScore,
             words: this.state.words,
@@ -90,6 +98,7 @@ export class LanguageProvider extends Component {
             setLanguage: this.setLanguage,
             setNextWord: this.setNextWord,
             setResponse: this.setResponse,
+            setResponseReceived: this.setResponseReceived,
             setSubmit: this.setSubmit,
             setWords: this.setWords,
         }

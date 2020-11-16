@@ -61,7 +61,7 @@ class RegistrationForm extends Component {
                         name='name'
                         required
                         aria-required='true'
-                        autocomplete='name'
+                        autoComplete='name'
                     />
                 </div>
                 <div className='registration-input'>
@@ -73,7 +73,7 @@ class RegistrationForm extends Component {
                         name='username'
                         required
                         aria-required='true'
-                        autocomplete='off'
+                        autoComplete='off'
                     />
                 </div>
                 <div className='registration-input'>
@@ -86,7 +86,7 @@ class RegistrationForm extends Component {
                         type='password'
                         required
                         aria-required='true'
-                        autocomplete='new-password'
+                        autoComplete='new-password'
                   />
                 </div>
                 <div className='registration-input'>

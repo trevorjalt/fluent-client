@@ -14,6 +14,7 @@ class LearnWord extends Component {
 
     state = {
         error: null,
+        result: {},
     }
 
     componentDidMount() {
@@ -26,13 +27,26 @@ class LearnWord extends Component {
             })
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        const { setResponseReceived } = this.context
+
+        if (prevState.result !== this.state.result) {
+            this.setState({ error: null })
+            setResponseReceived()
+        }
+    }
+
     handleGuessSubmit = ev => {
         ev.preventDefault()
         const { guess } = ev.target
         const { setGuess, setResponse, setSubmit} = this.context
         
         LanguageApiService.postGuess(guess.value)
-            .then(res => setResponse({ response: res }))
+            .then(res => {
+                setResponse({ response: res })
+                return res        
+            })
+            .then(res => this.setState({ result: res }))
             .then(setGuess(guess.value))
             .then(setSubmit())
     }
@@ -58,7 +72,7 @@ class LearnWord extends Component {
                         name='guess'
                         required
                         aria-required='true'
-                        autocomplete='off'
+                        autoComplete='off'
                     />
                 </div>
                 <div className='submit-word-guess'>
@@ -85,7 +99,7 @@ class LearnWord extends Component {
     }
 
     render() {
-        const { submit, isCorrect } = this.context
+        const { isCorrect, responseReceived, submit  } = this.context
 
         return (
             <div>
@@ -98,11 +112,11 @@ class LearnWord extends Component {
                     ? this.renderLearnWordForm()
                     : ''
                 }
-                {submit && isCorrect === false
+                {responseReceived && isCorrect === false
                     ? <Incorrect />
                     : ''
                 }
-                {submit && isCorrect === true
+                {responseReceived && isCorrect === true
                     ? <Correct />
                     : ''
                 }

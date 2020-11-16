@@ -65,7 +65,7 @@ class LoginForm extends Component {
                         name='username'
                         required
                         aria-required='true'
-                        autocomplete='username'
+                        autoComplete='username'
                     />
                 </div>
                 <div>
@@ -78,7 +78,7 @@ class LoginForm extends Component {
                         type='password'
                         required
                         aria-required='true'
-                        autocomplete='current-password'
+                        autoComplete='current-password'
                     />
                 </div>
                 <div className='submit-login'>
