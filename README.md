@@ -1,47 +1,131 @@
-# Spaced Repetition Capstone
+# fluent Client
 
-## Setup
+Welcome to fluent, an app where you can practice learning a language with the spaced reptition revision technique.
 
-To setup the application
+`fluent Client` is the frontend for `fluent`.  To see `fluent` in action, check out [fluent](https://benchmark-live.vercel.app/ "fluent").
 
-1. Fork and clone the project to your machine
-2. `npm install`. This will also install the application *Cypress.io* for running browser integration tests
+The `fluent` backend can be found at: [fluent-api](https://github.com/trevorjalt/fluent-api/ "fluent Api")
 
-The project expects you have the Spaced repetition API project setup and running on http://localhost:8000.
+`fluent` supports the creation of your own user account.  If you'd like to see it in action before signing up, use the demo account details below.
 
-Find instructions to setup the API here https://github.com/Thinkful-Ed/spaced-repetition-api.
+### demo account details
 
-## Running project
+* username: admin
+* password: pass
 
-This is a `create-react-app` project so `npm start` will start the project in development mode with hot reloading by default.
+## what is spaced repetition?
 
-## Running the tests
+Spaced repetition is a learning technique which exploits the psychological spacing effect.  Within `fluent`, this means that words that you translate correctly will pop up with increasingly less frequency with consecutive correct answers.  Conversely, get a word wrong and that word will begin to pop up more frequently.
 
-This project uses [Cypress IO](https://docs.cypress.io) for integration testing using the Chrome browser.
+## table of contents.
 
-Cypress has the following expectations:
+* [demo account details](#demo-account-details)
+* [a quick look at our lewk](#a-quick-look-at-our-lewk)
+* [the tech](#the-tech)
+  * [frontend](#frontend)
+  * [testing](#testing)
+  * [production](#production)
+* [setup](#setup)
+  * [local setup](#local-setup)
+* [quick start](#quick-start-scripts)
+* [component overview](#component-overview)
+  * [registration route](#registration-route)
+  * [login route](#login-route)
+  * [dashboard route](#dashboard-route)
+  * [learning route](#learning-route)
+  * [learning route correct](#learning-route-correct)
+  * [learning route incorrect](#learning-route-incorrect)
 
-- You have cypress installed (this is a devDependency of the project)
-- You have your application running at http://localhost:3000.
-  - You can change the address of this expectation in the `./cypress.json` file.
-- Your `./src/config.js` is using http://localhost:8000/api as the `API_ENDPOINT`
+## a quick look at our lewk.
 
-To start the tests run the command:
+![fluent app overview](/images/fluent-app-full-page-view.png)
 
-```bash
+## the tech.
+
+### frontend.
+
+* React
+  * Create React App
+  * React Router
+* HTML5
+* CSS3
+
+### testing.
+
+* Cypress
+
+### production.
+
+* Deployed via Vercel
+
+## setup.
+
+### local setup.
+
+Clone this repository to your local machine 
+
+````
+git clone https://github.com/trevorjalt/fluent-client fluent-client
+````
+
+Change directory into the cloned repository
+
+````
+cd fluent-client
+````
+
+Make a fresh start of the git history for this project
+
+```` 
+rm -rf .git && git init
+````
+
+Install the node dependencies 
+
+````
+npm install
+````
+
+Follow the [setup](https://github.com/trevorjalt/fluent-api#setup "setup") instructions to get `fluent Api` up and running.
+
+## quick start scripts.
+
+Start the application
+
+````
+npm start
+````
+
+With the client running, open a new terminal.  Navigate to the `fluent-client` root.  Run the `fluent` tests.
+
+````
 npm run cypress:open
-```
+````
 
-On the first run of this command, the cypress application will verify its install. Any other runs after this, the verification will be skipped.
+## component overview.
 
-The command will open up the Cypress application which reads tests from the `./cypress/integration/` directory. You can then run individual tests by clicking on the file names or run all tests by clicking the "run all tests" button in the cypress GUI.
+### registration route.
 
-Tests will assert against your running localhost client application.
+![fluent registration route component structure](/images/fluent-component-overview-registration.png)
 
-You can also start all of the tests in the command line only (not using the GUI) by running the command:
+### login route.
 
-```bash
-npm run cypress:run
-```
+![fluent login route component structure](/images/fluent-component-overview-login.png)
 
-This will save video recordings of the test runs in the directory `./cypress/videos/`.
+### dashboard route.
+
+![fluent dashboard route component structure](/images/fluent-component-overview-dashboard.png)
+
+### learning route.
+
+![fluent learning route component structure](/images/fluent-component-overview-learning.png)
+
+### learning route correct.
+
+![fluent learning route Correct component structure](/images/fluent-component-overview-learning-correct.png)
+
+### learning route incorrect. 
+
+![fluent learning route incorrect component structure](/images/fluent-component-overview-learning-incorrect.png)
+
+## lets get fluent. 
