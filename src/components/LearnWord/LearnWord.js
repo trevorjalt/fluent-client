@@ -32,8 +32,8 @@ class LearnWord extends Component {
         const { setGuess, setResponse, setSubmit} = this.context
         
         LanguageApiService.postGuess(guess.value)
-            .then(setGuess(guess.value))
             .then(res => setResponse({ response: res }))
+            .then(setGuess(guess.value))
             .then(setSubmit())
     }
 
