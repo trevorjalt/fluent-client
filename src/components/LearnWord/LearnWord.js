@@ -104,11 +104,11 @@ class LearnWord extends Component {
         return (
             <div>
                 <TotalScore />
-                {!submit
+                {!submit && !responseReceived
                     ? this.renderLearnWord()
                     : ''
                 }
-                {!submit
+                {!submit && !responseReceived
                     ? this.renderLearnWordForm()
                     : ''
                 }
