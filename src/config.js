@@ -2,11 +2,11 @@ let apiPath
 let tokenKey
 
 if (process.env.NODE_ENV === 'production') {
-    apiPath = process.env.API_ENDPOINT
-    tokenKey = process.env.TOKEN_KEY
+    apiPath = 'https://git.heroku.com/fluent-app-api.git/api'
+    tokenKey = 'fluent-client-auth-token'
 } else {
     apiPath = 'http://localhost:8000/api'
-    tokenKey = process.env.TOKEN_KEY
+    tokenKey = 'fluent-client-auth-token'
 }
 
 export default {
